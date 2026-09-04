@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="超清魔擦 App 技术支持与隐私政策。" />
+  <title>超清魔擦｜技术支持与隐私政策</title>
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --surface-soft: #eef0f4;
+      --text: #20232a;
+      --muted: #686f7b;
+      --line: #dfe2e8;
+      --accent: #6257d9;
+      --accent-soft: #eeecff;
+      --success: #287a58;
+      --shadow: 0 16px 45px rgba(25, 30, 40, 0.07);
+      --radius: 20px;
+      --max-width: 960px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111318;
+        --surface: #1a1d24;
+        --surface-soft: #232730;
+        --text: #f1f3f7;
+        --muted: #aeb4bf;
+        --line: #303540;
+        --accent: #a59cff;
+        --accent-soft: #2d294d;
+        --success: #71c89e;
+        --shadow: none;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--text);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 100;
+      padding: 9px 13px;
+      border-radius: 10px;
+      color: var(--text);
+      background: var(--surface);
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    nav {
+      width: min(calc(100% - 32px), var(--max-width));
+      min-height: 66px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+
+    .mark {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      color: #fff;
+      background: var(--accent);
+      font-size: 17px;
+      font-weight: 750;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a {
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 620;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: var(--surface-soft);
+    }
+
+    main,
+    footer {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .hero {
+      padding: 76px 0 52px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 16px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      color: var(--success);
+      background: color-mix(in srgb, var(--success) 12%, transparent);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    h1,
+    h2,
+    h3,
+    p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 14px;
+      font-size: clamp(38px, 7vw, 60px);
+      line-height: 1.1;
+      letter-spacing: -0.045em;
+    }
+
+    .lead {
+      max-width: 690px;
+      margin: 0 auto 25px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--text);
+      background: var(--surface);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      color: #fff;
+      background: var(--accent);
+    }
+
+    .page-section {
+      scroll-margin-top: 86px;
+      margin: 30px 0 56px;
+    }
+
+    .section-heading {
+      margin-bottom: 20px;
+    }
+
+    .section-heading .label {
+      display: inline-block;
+      margin-bottom: 7px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 8px;
+      font-size: clamp(29px, 5vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .section-heading p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .panel {
+      padding: clamp(22px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .panel + .panel { margin-top: 18px; }
+    .panel > :last-child { margin-bottom: 0; }
+
+    .panel h3 {
+      margin-bottom: 12px;
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface-soft);
+    }
+
+    .card h3 {
+      margin-bottom: 6px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      border-radius: 11px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-weight: 750;
+    }
+
+    ol,
+    ul {
+      margin: 0;
+      padding-left: 1.3rem;
+    }
+
+    li + li { margin-top: 8px; }
+
+    .note {
+      margin-top: 20px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      color: var(--muted);
+      background: var(--accent-soft);
+    }
+
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+
+    summary {
+      padding: 17px 2px;
+      cursor: pointer;
+      font-weight: 650;
+    }
+
+    details p,
+    details ul {
+      margin: -4px 0 18px;
+      color: var(--muted);
+    }
+
+    .privacy-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .privacy-summary .card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--success);
+    }
+
+    .policy-block + .policy-block {
+      margin-top: 31px;
+      padding-top: 29px;
+      border-top: 1px solid var(--line);
+    }
+
+    .policy-block h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .policy-block h4 {
+      margin: 20px 0 7px;
+      font-size: 16px;
+    }
+
+    .policy-block p { margin-bottom: 12px; }
+    .muted { color: var(--muted); }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 650px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      color: var(--muted);
+      background: var(--surface-soft);
+      font-size: 13px;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .back-top {
+      display: inline-flex;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 16px 0 max(36px, env(safe-area-inset-bottom));
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      nav { align-items: center; }
+      .brand span:last-child { display: none; }
+      .nav-links { gap: 0; }
+      .nav-links a { padding-inline: 8px; }
+      .hero { padding-top: 52px; }
+      .grid,
+      .privacy-summary { grid-template-columns: 1fr; }
+      .button { flex: 1; }
+    }
+
+    @media print {
+      .site-header { position: static; }
+      body { color: #000; background: #fff; }
+      .panel,
+      .card { box-shadow: none; break-inside: avoid; }
+      .skip-link,
+      .hero-actions,
+      .back-top { display: none; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#support">跳到主要内容</a>
+
+  <header class="site-header">
+    <nav aria-label="主要导航">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true">清</span>
+        <span>超清魔擦</span>
+      </a>
+      <div class="nav-links">
+        <a href="#support">技术支持</a>
+        <a href="#faq">常见问题</a>
+        <a href="#privacy">隐私政策</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow"><span class="dot"></span>设备端图片工具</div>
+      <h1>超清魔擦</h1>
+      <p class="lead">技术支持与隐私政策集中在同一个页面。点击下方入口可直接跳转到对应内容。</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#support">查看技术支持</a>
+        <a class="button" href="#privacy">查看隐私政策</a>
+      </div>
+    </div>
+
+    <section class="page-section" id="support" aria-labelledby="support-title">
+      <div class="section-heading">
+        <span class="label">SUPPORT</span>
+        <h2 id="support-title">技术支持</h2>
+        <p>了解功能使用方式、常见问题和基础故障排查。</p>
+      </div>
+
+      <div class="panel">
+        <div class="grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">1</div>
+            <h3>高清放大</h3>
+            <p>一次最多选择 20 张图片，设置统一倍率和输出格式后逐张增强，可分别分享或全部保存。</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">2</div>
+            <h3>智能擦除</h3>
+            <p>选择一张图片，涂抹需要移除的区域，再开始本地修补。支持撤销、重做和笔刷调节。</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">3</div>
+            <h3>格式转换</h3>
+            <p>一次最多选择 20 张图片，统一转换为 JPEG、PNG、HEIF 或 TIFF。</p>
+          </article>
+        </div>
+        <div class="note">处理时间取决于图片尺寸、数量、放大倍率和设备性能。高清放大属于计算密集型任务，逐张完成是正常现象。</div>
+      </div>
+
+      <div class="panel">
+        <h3>开始使用</h3>
+        <ol>
+          <li>在 App 首页选择需要的图片工具。</li>
+          <li>通过系统照片选择器选择图片。</li>
+          <li>调整倍率、格式、质量或擦除笔刷等参数。</li>
+          <li>开始处理并等待进度完成。</li>
+          <li>预览结果后单独分享，或保存到系统相册。</li>
+        </ol>
+      </div>
+
+      <div class="panel" id="faq">
+        <h3>常见问题</h3>
+
+        <details>
+          <summary>为什么保存图片时需要照片权限？</summary>
+          <p>App 仅在您点击保存时请求“添加照片”权限，用于把处理结果写入系统相册。选择图片使用的是系统照片选择器。</p>
+        </details>
+
+        <details>
+          <summary>图片会上传到服务器吗？</summary>
+          <p>不会。当前版本的放大、擦除和格式转换均在设备本地完成，App 不提供账户或云端图片存储功能。</p>
+        </details>
+
+        <details>
+          <summary>为什么高清放大比较慢或设备变热？</summary>
+          <p>高清放大会运行本地机器学习模型。较大的原图、更高倍率或较多图片都会增加计算量。建议保持足够电量与可用存储空间。</p>
+        </details>
+
+        <details>
+          <summary>为什么部分图片被跳过？</summary>
+          <p>文件损坏、格式无法读取或系统暂时无法提供原文件时，App 会跳过该图片并继续处理其他项目。可在系统照片 App 中打开原图后重新选择。</p>
+        </details>
+
+        <details>
+          <summary>输出格式应该如何选择？</summary>
+          <ul>
+            <li>PNG：适合透明图片或无损保存，文件通常较大。</li>
+            <li>HEIF：较小体积下保持较高画质，适合 Apple 设备。</li>
+            <li>JPEG：兼容性广，适合照片和日常分享。</li>
+            <li>TIFF：适合后续专业处理，文件通常较大。</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>如何清理临时文件？</summary>
+          <p>打开 App 首页右上角“设置”，在“存储与权限”中查看并清理临时文件。已保存到系统相册的图片不会被删除。</p>
+        </details>
+      </div>
+
+      <div class="panel">
+        <h3>基础故障排查</h3>
+        <ol>
+          <li>确认设备有足够的可用存储空间。</li>
+          <li>返回首页后重新进入工具并再次选择图片。</li>
+          <li>在 App 设置中清理临时文件，然后重试。</li>
+          <li>检查系统设置中的照片添加权限。</li>
+          <li>完全退出 App 后重新打开；问题仍存在时重启设备。</li>
+          <li>确认使用的是发布平台提供的最新版本。</li>
+        </ol>
+      </div>
+
+      <div class="panel">
+        <h3>联系与反馈</h3>
+        <p class="muted">如需进一步协助，请通过本应用发布平台显示的开发者联系方式反馈，并附上 App 版本、iOS 版本、设备型号、操作步骤和错误提示。请勿发送包含隐私内容的原始图片。</p>
+        <a class="button" href="#privacy">查看隐私政策</a>
+      </div>
+
+      <a class="back-top" href="#top">返回顶部 ↑</a>
+    </section>
+
+    <section class="page-section" id="privacy" aria-labelledby="privacy-title">
+      <div class="section-heading">
+        <span class="label">PRIVACY</span>
+        <h2 id="privacy-title">隐私政策</h2>
+        <p>适用于“超清魔擦”iOS App · 最后更新：2026 年 9 月 4 日</p>
+      </div>
+
+      <div class="privacy-summary" aria-label="隐私摘要">
+        <div class="card">
+          <strong>本地处理</strong>
+          <p>图片放大、擦除和格式转换均在设备上完成。</p>
+        </div>
+        <div class="card">
+          <strong>不追踪</strong>
+          <p>当前版本不包含广告、行为分析或跨 App 跟踪。</p>
+        </div>
+        <div class="card">
+          <strong>用户控制</strong>
+          <p>您决定选择、保存和清理哪些图片与临时文件。</p>
+        </div>
+      </div>
+
+      <article class="panel">
+        <div class="policy-block">
+          <h3>1. 适用范围</h3>
+          <p>本隐私政策说明“超清魔擦”（以下简称“本应用”）在提供图片高清放大、智能擦除和格式转换功能时如何访问、处理和保存信息。</p>
+          <p class="muted">本政策描述的是标注更新日期时的当前版本。通过 App Store 或其他平台提供的下载、付款和商店服务由相应平台按照其政策处理。</p>
+        </div>
+
+        <div class="policy-block">
+          <h3>2. 信息收集概况</h3>
+          <p>当前版本不要求注册账户，也不向开发者服务器发送您的图片或使用记录。</p>
+          <ul>
+            <li>不收集姓名、手机号、电子邮箱或账户资料。</li>
+            <li>不收集精确位置、通讯录、日历或麦克风数据。</li>
+            <li>不包含广告 SDK、统计分析 SDK 或用户跟踪功能。</li>
+            <li>不提供云端同步或远程图片存储。</li>
+          </ul>
+          <div class="note"><strong>重点：</strong>您选择的原图及生成结果由本应用在设备本地处理。</div>
+        </div>
+
+        <div class="policy-block">
+          <h3>3. App 使用的数据</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>数据或权限</th>
+                  <th>用途</th>
+                  <th>处理位置</th>
+                  <th>保留方式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>您选择的图片</td>
+                  <td>执行放大、擦除或格式转换</td>
+                  <td>设备本地</td>
+                  <td>处理期间保存在 App 临时目录</td>
+                </tr>
+                <tr>
+                  <td>处理结果</td>
+                  <td>预览、分享或保存到相册</td>
+                  <td>设备本地</td>
+                  <td>临时保存；您可在设置中清理</td>
+                </tr>
+                <tr>
+                  <td>照片添加权限</td>
+                  <td>在您点击保存时写入系统相册</td>
+                  <td>iOS 系统权限</td>
+                  <td>权限状态由系统管理</td>
+                </tr>
+                <tr>
+                  <td>App 偏好</td>
+                  <td>保存外观、默认倍率、格式和质量</td>
+                  <td>设备本地</td>
+                  <td>保留至重置设置或卸载 App</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="policy-block">
+          <h3>4. 照片访问与保存</h3>
+          <h4>选择图片</h4>
+          <p>本应用使用 iOS 系统照片选择器。只有您在系统界面中明确选择的图片会提供给本应用处理；本应用不会自行浏览整个照片图库。</p>
+          <h4>保存结果</h4>
+          <p>当您点击保存时，本应用会请求照片添加权限，并将对应结果写入系统相册。拒绝该权限不会影响本地处理和文件分享，但无法直接保存到相册。</p>
+          <h4>分享文件</h4>
+          <p>当您主动使用系统分享面板时，文件会交给您选择的目标 App 或服务。该目标如何处理文件受其自身隐私政策约束。</p>
+        </div>
+
+        <div class="policy-block">
+          <h3>5. 本地处理与第三方组件</h3>
+          <p>本应用随安装包提供本地图片处理模型和相关组件，用于超分辨率增强与区域修补。它们在设备上运行，不代表图片会发送给对应开源项目或第三方服务。</p>
+          <p>当前版本没有为核心图片处理建立网络上传流程。开源组件的许可信息随 App 一并提供。</p>
+        </div>
+
+        <div class="policy-block">
+          <h3>6. 本地存储与保留期限</h3>
+          <ul>
+            <li>导入副本和处理结果可能暂存在本应用的临时目录，以支持预览、分享和保存。</li>
+            <li>您可以在 App 设置中查看并清理临时文件。</li>
+            <li>iOS 可能在存储空间不足等情况下自动清理临时文件。</li>
+            <li>卸载本应用会移除其应用容器内的数据；已经保存到系统相册的图片不会随之删除。</li>
+            <li>外观和默认处理参数使用系统提供的本地偏好存储。</li>
+          </ul>
+        </div>
+
+        <div class="policy-block">
+          <h3>7. 您的选择与控制</h3>
+          <ul>
+            <li>可以取消照片选择，或不执行处理。</li>
+            <li>可以不授予照片添加权限，并改用系统分享功能。</li>
+            <li>可以在 iOS“设置”中查看或撤回照片权限。</li>
+            <li>可以在本应用设置中清理临时文件。</li>
+            <li>可以通过卸载本应用删除其应用容器内的设置和缓存。</li>
+          </ul>
+        </div>
+
+        <div class="policy-block">
+          <h3>8. 安全与儿童隐私</h3>
+          <p>本应用依赖 iOS 应用沙盒、系统照片选择器和权限机制来限制数据访问。没有任何软件环境能够保证绝对安全，请保持 iOS 和本应用为受支持的最新版本。</p>
+          <p>本应用不要求账户，也不会有意收集儿童的个人资料。家长或监护人应根据设备与家庭设置管理照片内容和 App 使用。</p>
+        </div>
+
+        <div class="policy-block">
+          <h3>9. 政策更新</h3>
+          <p>功能、权限或数据处理方式发生变化时，本政策可能更新。更新后的版本会在本页面标注新的日期。重大变化将按照适用要求提供提示。</p>
+        </div>
+
+        <div class="policy-block">
+          <h3>10. 联系我们</h3>
+          <p>如对本政策或数据处理方式有疑问，请通过本应用发布平台显示的开发者联系方式提出，并说明 App 版本和问题内容。请勿发送包含隐私信息的原始照片。</p>
+          <a class="button" href="#support">返回技术支持</a>
+        </div>
+      </article>
+
+      <a class="back-top" href="#top">返回顶部 ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 超清魔擦 · 技术支持与隐私政策</p>
+  </footer>
+</body>
+</html>
