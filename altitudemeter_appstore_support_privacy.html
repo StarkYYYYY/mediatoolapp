@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#102a54">
+  <meta name="description" content="户外海拔计的用户支持、常见问题与隐私政策。">
+  <title>户外海拔计｜支持与隐私政策</title>
+  <style>
+    :root {
+      --navy-950: #071525;
+      --navy-900: #102a54;
+      --navy-800: #163a68;
+      --navy-700: #1c467b;
+      --aqua-500: #3fc9c1;
+      --aqua-300: #91e2dd;
+      --orange-400: #ffb45f;
+      --ink: #10243a;
+      --muted: #5f7183;
+      --line: #d9e4e9;
+      --paper: #ffffff;
+      --mist: #eef5f7;
+      --success: #1d735f;
+      --shadow: 0 22px 60px rgba(16, 42, 84, 0.12);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --content: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 18%, rgba(63, 201, 193, 0.12), transparent 30rem),
+        linear-gradient(180deg, var(--navy-950) 0 500px, var(--mist) 500px 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 1000;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      color: var(--navy-950);
+      background: #fff;
+      border-radius: 10px;
+      transform: translateY(-160%);
+      transition: transform 160ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      color: #fff;
+      background: rgba(7, 21, 37, 0.88);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 40px), var(--content));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      overflow: hidden;
+      flex: none;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .brand-mark svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .top-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-nav a {
+      min-height: 44px;
+      padding: 9px 16px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.74);
+      text-decoration: none;
+      font-size: 0.94rem;
+      transition: color 160ms ease, background 160ms ease;
+    }
+
+    .top-nav a:hover,
+    .top-nav a:focus-visible {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      outline: none;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      content: "";
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
+    .hero::before {
+      width: 430px;
+      height: 430px;
+      top: -250px;
+      right: -100px;
+      background: rgba(63, 201, 193, 0.13);
+      border: 1px solid rgba(145, 226, 221, 0.14);
+    }
+
+    .hero::after {
+      width: 600px;
+      height: 190px;
+      right: -110px;
+      bottom: -155px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transform: rotate(-8deg);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 40px), var(--content));
+      margin: 0 auto;
+      padding: 72px 0 92px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr);
+      align-items: end;
+      gap: 64px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--aqua-300);
+      font-size: 0.84rem;
+      font-weight: 750;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      line-height: 1.25;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin-bottom: 20px;
+      font-size: clamp(2.55rem, 7vw, 5.8rem);
+      letter-spacing: -0.055em;
+    }
+
+    .hero-lead {
+      max-width: 680px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: clamp(1rem, 1.5vw, 1.16rem);
+    }
+
+    .hero-panel {
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 22px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-panel p {
+      margin: 0;
+    }
+
+    .hero-panel .meta-label {
+      color: rgba(255, 255, 255, 0.56);
+      font-size: 0.82rem;
+    }
+
+    .hero-panel .meta-value {
+      margin-top: 2px;
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+
+    .hero-panel hr {
+      margin: 17px 0;
+      border: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    main {
+      width: min(calc(100% - 40px), var(--content));
+      margin: -38px auto 0;
+      padding-bottom: 70px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .jump-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .jump-card {
+      position: relative;
+      min-height: 138px;
+      padding: 24px 26px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      overflow: hidden;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid rgba(217, 228, 233, 0.92);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .jump-card:hover,
+    .jump-card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 28px 70px rgba(16, 42, 84, 0.16);
+      outline: 3px solid rgba(63, 201, 193, 0.28);
+      outline-offset: 3px;
+    }
+
+    .jump-card::before {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      top: -54px;
+      right: -28px;
+      content: "";
+      background: rgba(63, 201, 193, 0.12);
+      border-radius: 50%;
+    }
+
+    .jump-kicker {
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .jump-title {
+      margin: 0;
+      font-size: 1.42rem;
+      font-weight: 800;
+    }
+
+    .jump-arrow {
+      position: relative;
+      z-index: 1;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      flex: none;
+      color: var(--navy-900);
+      background: var(--aqua-300);
+      border-radius: 50%;
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .content-card {
+      margin-top: 24px;
+      padding: clamp(26px, 5vw, 56px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 12px;
+      color: var(--navy-900);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      letter-spacing: -0.045em;
+    }
+
+    .section-heading p:last-child {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .support-grid,
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .info-card {
+      padding: 24px;
+      background: #f7fafb;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+
+    .info-card h3 {
+      margin-bottom: 9px;
+      color: var(--navy-900);
+      font-size: 1.08rem;
+    }
+
+    .info-card p,
+    .info-card ul {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .info-card ul {
+      padding-left: 1.15em;
+    }
+
+    .info-card li + li {
+      margin-top: 7px;
+    }
+
+    .card-index {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 18px;
+      display: grid;
+      place-items: center;
+      color: var(--navy-900);
+      background: var(--aqua-300);
+      border-radius: 10px;
+      font-size: 0.83rem;
+      font-weight: 800;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 20px 22px;
+      color: #604018;
+      background: #fff7ea;
+      border: 1px solid #f4d39f;
+      border-radius: var(--radius-md);
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #49300e;
+    }
+
+    .faq {
+      margin-top: 38px;
+    }
+
+    .faq h3,
+    .contact-block h3,
+    .policy-block h3 {
+      color: var(--navy-900);
+      font-size: 1.42rem;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+    }
+
+    details:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    summary {
+      min-height: 64px;
+      padding: 17px 38px 17px 0;
+      position: relative;
+      cursor: pointer;
+      color: var(--ink);
+      font-weight: 730;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      content: "+";
+      color: var(--navy-900);
+      background: #e7f4f3;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      max-width: 820px;
+      margin: -2px 0 18px;
+      color: var(--muted);
+    }
+
+    .contact-block {
+      margin-top: 38px;
+      padding: 28px;
+      color: #fff;
+      background:
+        linear-gradient(120deg, rgba(63, 201, 193, 0.15), transparent 42%),
+        var(--navy-900);
+      border-radius: var(--radius-md);
+    }
+
+    .contact-block h3 {
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .contact-block p {
+      max-width: 760px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .contact-actions {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 46px;
+      padding: 10px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: var(--navy-950);
+      background: var(--aqua-300);
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: #b5f1ed;
+      transform: translateY(-1px);
+      outline: 3px solid rgba(145, 226, 221, 0.25);
+      outline-offset: 3px;
+    }
+
+    .email-text {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.94rem;
+      word-break: break-all;
+    }
+
+    .policy-summary {
+      padding: 22px 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+
+    .policy-summary div {
+      padding: 18px;
+      background: #f7fafb;
+    }
+
+    .policy-summary strong,
+    .policy-summary span {
+      display: block;
+    }
+
+    .policy-summary strong {
+      color: var(--success);
+      font-size: 1.08rem;
+    }
+
+    .policy-summary span {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .policy-block {
+      padding-top: 36px;
+    }
+
+    .policy-block + .policy-block {
+      margin-top: 36px;
+      border-top: 1px solid var(--line);
+    }
+
+    .policy-block h3 {
+      margin-bottom: 15px;
+    }
+
+    .policy-block p,
+    .policy-block li {
+      color: var(--muted);
+    }
+
+    .policy-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-block ul,
+    .policy-block ol {
+      padding-left: 1.25em;
+    }
+
+    .policy-block li + li {
+      margin-top: 10px;
+    }
+
+    .data-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .data-row {
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 18px;
+      background: #f7fafb;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .data-row strong {
+      color: var(--navy-900);
+    }
+
+    .data-row span {
+      color: var(--muted);
+    }
+
+    .inline-link {
+      color: #135f73;
+      text-underline-offset: 3px;
+    }
+
+    .inline-link:hover,
+    .inline-link:focus-visible {
+      color: var(--navy-900);
+      text-decoration-thickness: 2px;
+    }
+
+    .site-footer {
+      color: rgba(255, 255, 255, 0.68);
+      background: var(--navy-950);
+    }
+
+    .footer-inner {
+      width: min(calc(100% - 40px), var(--content));
+      margin: 0 auto;
+      padding: 34px 0 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+    .footer-inner a {
+      color: var(--aqua-300);
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        background: linear-gradient(180deg, var(--navy-950) 0 620px, var(--mist) 620px 100%);
+      }
+
+      .header-inner {
+        width: min(calc(100% - 28px), var(--content));
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      .top-nav {
+        gap: 2px;
+      }
+
+      .top-nav a {
+        padding-inline: 12px;
+      }
+
+      .hero-inner {
+        width: min(calc(100% - 32px), var(--content));
+        padding: 48px 0 78px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      h1 {
+        font-size: clamp(2.7rem, 16vw, 4.4rem);
+      }
+
+      main {
+        width: min(calc(100% - 24px), var(--content));
+      }
+
+      .jump-grid,
+      .support-grid,
+      .privacy-grid,
+      .policy-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .content-card {
+        padding: 26px 20px;
+        border-radius: 22px;
+      }
+
+      .data-row {
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+
+      .footer-inner {
+        width: min(calc(100% - 32px), var(--content));
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      body {
+        color: #000;
+        background: #fff;
+      }
+
+      .site-header,
+      .jump-grid,
+      .site-footer {
+        display: none;
+      }
+
+      .hero {
+        color: #000;
+      }
+
+      .hero-inner {
+        padding: 20px 0;
+        display: block;
+      }
+
+      .hero-lead,
+      .eyebrow,
+      .hero-panel .meta-label {
+        color: #333;
+      }
+
+      .hero-panel {
+        margin-top: 20px;
+        padding: 0;
+        color: #000;
+        border: 0;
+        box-shadow: none;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+      }
+
+      .content-card {
+        margin: 0;
+        padding: 24px 0;
+        border: 0;
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="返回页面顶部">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 1024 1024" role="img">
+            <rect width="1024" height="1024" fill="#102A54"/>
+            <circle cx="792" cy="236" r="282" fill="#1C467B"/>
+            <path d="M638 151C731 151 806 226 806 319" stroke="#52D2CA" stroke-width="30" stroke-linecap="round"/>
+            <path d="M174 770L407 395C420 374 450 374 463 395L568 564L663 420C677 399 707 399 721 420L865 638V770H174Z" fill="#F8FCFF"/>
+            <path d="M407 395C420 374 450 374 463 395L514 477L449 459L402 511L367 457L407 395Z" fill="#A9E8E4"/>
+            <path d="M663 420C677 399 707 399 721 420L767 490L712 474L671 517L631 469L663 420Z" fill="#A9E8E4"/>
+            <path d="M174 770H865V838H174V770Z" fill="#CFE9F1"/>
+            <path d="M174 770H865V791H174V770Z" fill="#52D2CA"/>
+            <rect x="711" y="288" width="18" height="290" rx="9" fill="#52D2CA"/>
+            <rect x="746" y="340" width="52" height="18" rx="9" fill="#52D2CA"/>
+            <rect x="746" y="410" width="76" height="18" rx="9" fill="#52D2CA"/>
+            <rect x="746" y="480" width="52" height="18" rx="9" fill="#52D2CA"/>
+            <rect x="746" y="550" width="76" height="18" rx="9" fill="#52D2CA"/>
+            <circle cx="720" cy="315" r="27" fill="#FFB45F"/>
+          </svg>
+        </span>
+        <span>户外海拔计</span>
+      </a>
+      <nav class="top-nav" aria-label="页面导航">
+        <a href="#support">使用支持</a>
+        <a href="#privacy">隐私政策</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Support and privacy</p>
+        <h1 id="page-title">户外海拔计</h1>
+        <p class="hero-lead">在这里查找使用帮助、故障排查方法和完整隐私政策。页面内容适用于户外海拔计当前公开版本。</p>
+      </div>
+      <aside class="hero-panel" aria-label="页面信息">
+        <p class="meta-label">当前应用版本</p>
+        <p class="meta-value">1.0.0</p>
+        <hr>
+        <p class="meta-label">政策生效日期</p>
+        <p class="meta-value">2026 年 9 月 7 日</p>
+      </aside>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <nav class="jump-grid" aria-label="内容快速入口">
+      <a class="jump-card" href="#support">
+        <span>
+          <span class="jump-kicker">遇到问题</span>
+          <span class="jump-title">查看使用支持</span>
+        </span>
+        <span class="jump-arrow" aria-hidden="true">↓</span>
+      </a>
+      <a class="jump-card" href="#privacy">
+        <span>
+          <span class="jump-kicker">了解数据处理</span>
+          <span class="jump-title">阅读隐私政策</span>
+        </span>
+        <span class="jump-arrow" aria-hidden="true">↓</span>
+      </a>
+    </nav>
+
+    <section class="content-card" id="support" aria-labelledby="support-title">
+      <div class="section-heading">
+        <p class="eyebrow">App support</p>
+        <h2 id="support-title">使用支持</h2>
+        <p>户外海拔计通过设备定位和气压传感器提供海拔信息，并支持天气查询、高度快照和爬升记录。以下方法可以解决大多数常见问题。</p>
+      </div>
+
+      <div class="support-grid">
+        <article class="info-card">
+          <div class="card-index">01</div>
+          <h3>没有显示 GPS 海拔</h3>
+          <ul>
+            <li>确认系统定位服务已开启。</li>
+            <li>在系统设置中允许户外海拔计使用位置。</li>
+            <li>前往视野开阔处并等待定位精度稳定。</li>
+            <li>也可以在应用设置中切换到气压海拔。</li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <div class="card-index">02</div>
+          <h3>没有气压或气压海拔</h3>
+          <ul>
+            <li>气压功能依赖设备内置气压计。</li>
+            <li>部分设备没有气压传感器，此时请使用 GPS 海拔。</li>
+            <li>气压海拔会受到天气和环境气压变化影响。</li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <div class="card-index">03</div>
+          <h3>天气无法更新</h3>
+          <ul>
+            <li>检查网络连接和定位权限。</li>
+            <li>天气查询需要有效的经纬度信息。</li>
+            <li>稍后重试，第三方天气服务可能暂时不可用。</li>
+            <li>可在设置中开启或关闭自动刷新天气。</li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <div class="card-index">04</div>
+          <h3>锁屏后爬升记录中断</h3>
+          <ul>
+            <li>从应用内主动开始一段爬升记录。</li>
+            <li>允许后台定位，并保留系统显示的定位指示。</li>
+            <li>在 Android 设备上允许记录通知正常显示。</li>
+            <li>暂停或结束记录后，应用会停止记录模式。</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>安全提示</strong>
+        海拔、气压、定位、天气和可用氧估算会受到设备传感器、定位环境、网络、气象数据及计算模型影响，仅供参考。请勿将本应用作为救援导航、医疗判断或其他安全关键场景的唯一依据。
+      </div>
+
+      <div class="faq">
+        <h3>常见问题</h3>
+        <details>
+          <summary>如何选择海拔数据源？</summary>
+          <p>在应用设置中可以选择智能切换、GPS 海拔或气压海拔。智能切换会优先使用定位质量合适的 GPS 海拔，并在必要时使用设备气压计计算的海拔。</p>
+        </details>
+        <details>
+          <summary>如何更改米或英尺？</summary>
+          <p>打开应用设置，在显示单位中选择米或英尺。首页、记录和图表会使用所选单位显示。</p>
+        </details>
+        <details>
+          <summary>爬升记录保存在什么地方？</summary>
+          <p>高度快照、当前爬升和已完成行程保存在设备本地。应用目前不提供账号系统，也不会把这些记录上传到开发者自有服务器。</p>
+        </details>
+        <details>
+          <summary>如何删除已保存的数据？</summary>
+          <p>高度快照可以在历史记录或设置页面中清空。删除应用可移除应用保存在当前设备上的其他本地数据。设备备份中的副本由你的系统备份设置和平台规则管理。</p>
+        </details>
+        <details>
+          <summary>为什么不同设备显示的海拔可能不同？</summary>
+          <p>GPS 信号、垂直定位精度、传感器硬件、天气变化和气压模型都会影响结果。不同设备或不同时间的读数存在差异属于正常情况。</p>
+        </details>
+      </div>
+
+      <div class="contact-block" id="contact">
+        <h3>联系支持</h3>
+        <p>如需反馈问题或提出功能建议，请在邮件中说明设备型号、系统版本、应用版本、问题现象和复现步骤。请勿发送不必要的精确位置或其他敏感信息。</p>
+        <div class="contact-actions">
+          <a class="button" href="mailto:youappshowing@outlook.com?subject=%E6%88%B7%E5%A4%96%E6%B5%B7%E6%8B%94%E8%AE%A1%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81">发送支持邮件</a>
+          <span class="email-text">youappshowing@outlook.com</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card" id="privacy" aria-labelledby="privacy-title">
+      <div class="section-heading">
+        <p class="eyebrow">Privacy policy</p>
+        <h2 id="privacy-title">隐私政策</h2>
+        <p>我们重视你的隐私。本政策说明户外海拔计读取哪些信息、为何使用这些信息、哪些内容会离开设备，以及你可以如何管理或删除数据。</p>
+      </div>
+
+      <div class="policy-summary" aria-label="隐私摘要">
+        <div>
+          <strong>无账号</strong>
+          <span>无需注册或登录</span>
+        </div>
+        <div>
+          <strong>无广告跟踪</strong>
+          <span>不含广告或跨应用跟踪</span>
+        </div>
+        <div>
+          <strong>记录存本机</strong>
+          <span>快照和行程不上传至开发者服务器</span>
+        </div>
+      </div>
+
+      <div class="policy-block">
+        <h3>一 适用范围</h3>
+        <p>本隐私政策适用于户外海拔计移动应用及本支持页面。使用应用中的天气、地图或邮件功能时，相关第三方服务还会按照其各自的隐私政策处理信息。</p>
+      </div>
+
+      <div class="policy-block">
+        <h3>二 我们处理的信息</h3>
+        <div class="data-list">
+          <div class="data-row">
+            <strong>位置与定位信息</strong>
+            <span>在获得系统授权后，应用会读取经纬度、GPS 海拔、水平和垂直定位精度及更新时间，用于显示当前位置、海拔、坐标、天气，并在你主动开始记录时计算爬升变化。</span>
+          </div>
+          <div class="data-row">
+            <strong>气压传感器信息</strong>
+            <span>设备支持时，应用会读取气压传感器数据并根据标准大气模型估算海拔。气压数据不是健康或生物识别信息。</span>
+          </div>
+          <div class="data-row">
+            <strong>高度快照与行程</strong>
+            <span>你主动保存的快照可包含时间、海拔、气压、经纬度和位置名称。爬升记录可包含标题、时间、海拔采样点、累计爬升、起止位置及相关统计。</span>
+          </div>
+          <div class="data-row">
+            <strong>应用设置</strong>
+            <span>数据源、显示单位、主题、天气自动刷新和位置显示偏好会保存在设备本地。</span>
+          </div>
+          <div class="data-row">
+            <strong>支持邮件</strong>
+            <span>当你主动发送支持邮件时，我们会收到你提供的邮箱地址、邮件内容和附件，并仅用于回复问题、处理反馈或改进应用。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="policy-block">
+        <h3>三 信息如何使用</h3>
+        <ul>
+          <li>提供 GPS 海拔、气压海拔、坐标和定位精度显示。</li>
+          <li>查询当前位置的名称、当前天气和近期天气预报。</li>
+          <li>在你主动开始记录后生成爬升曲线和行程统计。</li>
+          <li>在支持的 iOS 设备上通过实时活动显示当前爬升状态。</li>
+          <li>保存你的显示设置、高度快照和行程记录。</li>
+          <li>响应你主动提交的支持请求和产品反馈。</li>
+        </ul>
+      </div>
+
+      <div class="policy-block">
+        <h3>四 第三方服务与数据传输</h3>
+        <div class="privacy-grid">
+          <article class="info-card">
+            <h3>和风天气</h3>
+            <p>为了返回位置名称、当前天气和近期预报，应用会通过加密网络连接向和风天气接口发送位置参数，包括经纬度或由位置查询得到的地点标识。网络服务通常还会接收到 IP 地址等请求信息。相关处理受<a class="inline-link" href="https://www.qweather.com/terms/privacy" target="_blank" rel="noopener noreferrer">和风天气隐私政策</a>约束。</p>
+          </article>
+          <article class="info-card">
+            <h3>系统地图</h3>
+            <p>只有当你主动点击在地图中打开位置时，应用才会将当前坐标交给 Apple 地图或设备所使用的外部地图服务。之后的数据处理由相应地图服务的隐私政策约束。</p>
+          </article>
+          <article class="info-card">
+            <h3>系统实时活动</h3>
+            <p>在支持的 iOS 设备上，爬升状态可通过系统实时活动显示。应用向系统组件提供行程标识、海拔、累计爬升、时长、单位和状态，用于在本机展示。</p>
+          </article>
+          <article class="info-card">
+            <h3>电子邮件服务</h3>
+            <p>你主动联系支持时，邮件会由你和开发者所使用的邮件服务商传输和保存。请只提供解决问题所必需的信息。</p>
+          </article>
+        </div>
+        <p>我们不出售个人信息，不将信息用于广告定向，也不使用数据进行跨应用或跨网站跟踪。除提供上述功能、响应你的请求、遵守法律义务或保护合法权益外，我们不会向其他方披露信息。</p>
+      </div>
+
+      <div class="policy-block">
+        <h3>五 权限说明</h3>
+        <ul>
+          <li><strong>使用期间的位置权限：</strong>用于显示 GPS 海拔、坐标和位置名称，以及查询当地天气。</li>
+          <li><strong>后台位置能力：</strong>仅在你主动开始爬升记录后，用于在锁屏或切换应用时继续统计海拔变化。暂停或结束记录会退出记录模式。</li>
+          <li><strong>运动与传感器权限：</strong>用于读取设备气压计并估算海拔。拒绝此权限不会阻止你使用可用的 GPS 海拔。</li>
+          <li><strong>通知权限：</strong>Android 设备可能请求通知权限，以便在后台记录时显示持续通知。拒绝通知可能影响后台记录的可见性或可靠性。</li>
+          <li><strong>网络访问：</strong>用于向天气服务请求当前位置的天气数据。</li>
+        </ul>
+        <p>你可以随时在系统设置中撤销位置、运动或通知权限。撤销后，依赖相应权限的功能可能无法使用，但不影响其他可用功能。</p>
+      </div>
+
+      <div class="policy-block">
+        <h3>六 本地存储与保留期限</h3>
+        <ul>
+          <li>应用设置、高度快照、活动中的爬升记录和已完成行程保存在当前设备的应用存储空间中。</li>
+          <li>天气结果主要用于当前界面展示，不作为账户资料上传到开发者自有服务器。</li>
+          <li>本地数据会保留到你在应用内清除相应快照、卸载应用或系统清除应用数据为止。</li>
+          <li>系统备份可能按照你的设备及云备份设置包含应用数据，相关保留和删除由平台规则管理。</li>
+          <li>支持邮件会在解决问题和履行合理记录需求所需期间保留，你可以通过联系邮箱申请删除。</li>
+          <li>和风天气及其他第三方服务的保留期限由其各自政策决定。</li>
+        </ul>
+      </div>
+
+      <div class="policy-block">
+        <h3>七 你的选择与权利</h3>
+        <ul>
+          <li>在系统设置中查看或撤销应用权限。</li>
+          <li>在应用设置中关闭位置卡片或天气自动刷新。</li>
+          <li>在历史记录或设置中清除已保存的高度快照。</li>
+          <li>卸载应用以删除当前设备上由应用保存的其他本地数据。</li>
+          <li>通过下方邮箱询问数据处理情况，或申请删除你曾通过支持邮件提供的信息。</li>
+        </ul>
+        <p>由于应用没有账号系统，也不会把本地高度快照和行程记录上传到开发者自有服务器，我们无法从远程读取、导出或删除这些仅存于你设备上的内容。</p>
+      </div>
+
+      <div class="policy-block">
+        <h3>八 数据安全</h3>
+        <p>应用使用操作系统提供的权限控制和应用沙盒保存本地数据，并通过 HTTPS 加密连接请求天气服务。任何传输或存储方式都无法保证绝对安全，请妥善保护你的设备和系统账户。</p>
+      </div>
+
+      <div class="policy-block">
+        <h3>九 未成年人</h3>
+        <p>本应用并非专门面向未成年人设计，也不提供账号注册、社交互动或广告功能。如果监护人认为未成年人通过支持邮件提供了不必要的个人信息，请联系我们处理。</p>
+      </div>
+
+      <div class="policy-block">
+        <h3>十 政策变更</h3>
+        <p>当应用功能、数据处理方式或适用规则发生变化时，我们可能更新本政策，并在本页面标注新的生效日期。重大变化会通过适当方式提供提示。</p>
+      </div>
+
+      <div class="policy-block">
+        <h3>十一 联系我们</h3>
+        <p>如果你对本隐私政策、数据处理或应用使用有任何问题，请发送邮件至 <a class="inline-link" href="mailto:youappshowing@outlook.com?subject=%E6%88%B7%E5%A4%96%E6%B5%B7%E6%8B%94%E8%AE%A1%E9%9A%90%E7%A7%81%E5%92%A8%E8%AF%A2">youappshowing@outlook.com</a>。为保护隐私，请勿在邮件中发送与问题无关的精确位置或敏感信息。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>户外海拔计 · 支持与隐私政策</p>
+      <a href="#top">返回顶部</a>
+    </div>
+  </footer>
+</body>
+</html>
