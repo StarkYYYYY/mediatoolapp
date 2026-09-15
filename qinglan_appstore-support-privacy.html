@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>轻览 - App Store 支持与隐私政策</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --text: #222529;
+      --muted: #666f7a;
+      --line: #ddd8cf;
+      --accent: #1f6f8b;
+      --accent-strong: #154f64;
+      --soft: #edf6f8;
+      --shadow: 0 18px 48px rgba(33, 37, 41, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151719;
+        --surface: #202326;
+        --text: #f1f3f4;
+        --muted: #aeb7bf;
+        --line: #363b40;
+        --accent: #79c7df;
+        --accent-strong: #a6ddef;
+        --soft: #1a3138;
+        --shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+
+    a {
+      color: var(--accent-strong);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 56px;
+    }
+
+    header {
+      padding: 36px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    main {
+      display: grid;
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    section {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 26px 0 10px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 16px;
+      padding-left: 1.25em;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .notice {
+      margin: 18px 0;
+      padding: 16px 18px;
+      border-radius: 8px;
+      background: var(--soft);
+      border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 18px 0 4px;
+    }
+
+    .meta div {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--surface) 84%, var(--soft));
+    }
+
+    .meta strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 24px, 1040px);
+        padding-top: 18px;
+      }
+
+      header {
+        padding-top: 24px;
+      }
+
+      section {
+        padding: 22px 18px;
+      }
+
+      nav a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="eyebrow">App Store 支持与隐私政策</p>
+      <h1>轻览</h1>
+      <p class="lead">轻览是一款 macOS 图片浏览器，专注于本地图片查看、文件夹浏览、缩放旋转、信息查看、裁剪导出和批量调整尺寸。这个页面同时提供 App Store 支持信息和隐私政策。</p>
+      <nav aria-label="页面导航">
+        <a href="#support">支持与帮助</a>
+        <a href="#privacy">隐私政策</a>
+        <a href="#contact">联系支持</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="support" aria-labelledby="support-title">
+        <h2 id="support-title">支持与帮助</h2>
+        <p>如果你在使用轻览时遇到问题，可以先参考以下说明。应用处理的是你主动打开的本地图片或文件夹，不需要账号登录，也不依赖云端服务。</p>
+
+        <h3>主要功能</h3>
+        <ul>
+          <li>打开单张或多张图片，也可以打开包含图片的文件夹。</li>
+          <li>支持常见图片格式，包括 JPG、PNG、GIF、BMP、TIFF、HEIC、HEIF、WebP、RAW、SVG、PSD 等。</li>
+          <li>提供适应窗口、实际大小、缩放、旋转、全屏查看、图片信息查看等浏览功能。</li>
+          <li>支持按名称、日期、大小排序，按格式筛选，并可在文件夹内容变化时刷新列表。</li>
+          <li>支持框选复制、框选导出，以及单张或批量调整尺寸并导出。</li>
+          <li>可选择将支持的图片格式设置为默认由轻览打开。</li>
+        </ul>
+
+        <h3>常见问题</h3>
+        <p><strong>为什么某些图片无法打开？</strong><br>文件可能已损坏、尚未完整下载，或者系统当前无法解码该格式。你可以尝试在访达中确认文件是否完整，再重新打开。</p>
+        <p><strong>为什么导出时提示不能覆盖已有文件？</strong><br>为避免误覆盖原图或已有输出文件，轻览会要求你使用新的文件名或选择其他输出位置。</p>
+        <p><strong>应用会上传我的图片吗？</strong><br>不会。轻览在本机处理你选择的图片和文件夹，不会把图片上传到开发者服务器。</p>
+
+        <div class="notice" id="contact">
+          <strong>联系支持</strong>
+          <p>如果问题仍然存在，请通过 App Store 页面中显示的开发者联系方式联系支持。反馈时建议附上 macOS 版本、轻览版本、问题步骤，以及相关图片格式。</p>
+        </div>
+      </section>
+
+      <section id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">隐私政策</h2>
+        <p>生效日期：2026 年 9 月 15 日</p>
+        <p>本隐私政策说明轻览如何处理信息。轻览是一款本地运行的 macOS 应用，我们尊重你的隐私，并尽量减少数据访问。</p>
+
+        <div class="meta" aria-label="隐私摘要">
+          <div>
+            <strong>数据收集</strong>
+            不收集个人数据
+          </div>
+          <div>
+            <strong>跟踪</strong>
+            不进行跨 App 或跨网站跟踪
+          </div>
+          <div>
+            <strong>账号</strong>
+            不需要注册或登录
+          </div>
+          <div>
+            <strong>云端上传</strong>
+            不上传你的图片
+          </div>
+        </div>
+
+        <h3>我们收集哪些数据</h3>
+        <p>轻览不会收集、保存或向开发者服务器发送你的个人数据。应用不包含广告追踪，不建立用户画像，也不出售或共享用户数据。</p>
+
+        <h3>本地文件访问</h3>
+        <p>当你选择图片或文件夹时，轻览会在本机读取这些文件，以便显示图片、生成缩略图、查看文件信息、检测文件夹变化、执行裁剪或导出。应用只处理你主动选择或通过系统打开方式传入的文件。</p>
+
+        <h3>本地偏好设置</h3>
+        <p>轻览可能会在本机保存一些偏好设置，例如外观模式、画布背景、文件夹扫描方式，以及是否显示过文件关联设置。这些设置通过系统提供的本地存储保存，不会发送给开发者。</p>
+
+        <h3>文件时间戳和文件信息</h3>
+        <p>为了排序、刷新文件夹、识别图片是否变化、显示图片信息，以及避免对错误文件执行删除或导出操作，轻览会读取文件名、路径、大小、修改时间、图片尺寸和部分图片元数据。这些信息仅用于本机功能。</p>
+
+        <h3>第三方服务</h3>
+        <p>轻览不使用第三方分析服务、广告 SDK 或远程追踪服务。应用可能使用系统框架和随应用分发的图片编码相关组件来完成图片读取与导出功能。</p>
+
+        <h3>儿童隐私</h3>
+        <p>轻览不会有意收集儿童的个人信息。由于应用不收集个人数据，也不提供账号系统，儿童使用时的数据仍保留在本机。</p>
+
+        <h3>政策更新</h3>
+        <p>如果未来功能发生变化并影响数据处理方式，我们会更新本页面。更新后的隐私政策会在此页面展示新的生效日期。</p>
+
+        <h3>联系我们</h3>
+        <p>如对本隐私政策或应用支持有疑问，请通过 App Store 页面中显示的开发者联系方式与我们联系。</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 shasha dai. All rights reserved. 本页面为轻览的 App Store 支持与隐私政策页面。</p>
+    </footer>
+  </div>
+</body>
+</html>
