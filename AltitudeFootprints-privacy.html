@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="海拔足迹隐私政策：了解位置、传感器、本地历史记录、天气与地图服务的数据处理方式，以及您的个人信息权利。">
+  <title>海拔足迹 · 隐私政策</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f3f7f6;
+      --surface: #ffffff;
+      --text: #182c29;
+      --muted: #536763;
+      --accent: #086856;
+      --line: #d6e3df;
+      --notice: #eaf5f0;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.85;
+      overflow-wrap: anywhere;
+    }
+    main { max-width: 900px; margin: 40px auto; padding: 40px 48px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; }
+    header { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 8px; color: var(--accent); font-size: 14px; font-weight: 700; letter-spacing: .08em; }
+    h1 { margin: 0 0 14px; font-size: clamp(28px, 5vw, 38px); line-height: 1.3; }
+    h2 { margin: 36px 0 12px; font-size: 22px; line-height: 1.5; }
+    h3 { margin: 24px 0 8px; font-size: 18px; }
+    p { margin: 12px 0; }
+    .meta, footer { color: var(--muted); font-size: 14px; }
+    .notice { margin: 24px 0; padding: 16px 20px; background: var(--notice); border-left: 4px solid var(--accent); border-radius: 8px; }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+    nav { margin: 24px 0; padding: 16px 20px; border: 1px solid var(--line); border-radius: 12px; }
+    nav ol { margin: 8px 0 0; padding-left: 24px; columns: 2; column-gap: 32px; }
+    nav li { break-inside: avoid; padding: 3px 0; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 7px 0; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+    table { border-collapse: collapse; width: 100%; min-width: 610px; font-size: 14px; }
+    caption { text-align: left; padding: 12px 14px; font-weight: 700; }
+    th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-top: 1px solid var(--line); }
+    th { background: var(--notice); font-weight: 700; }
+    footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); }
+    @media (max-width: 640px) {
+      main { margin: 0; padding: 28px 20px; border: 0; border-radius: 0; }
+      nav ol { columns: 1; }
+      h2 { font-size: 20px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --background: #101a18; --surface: #172420; --text: #e3eee9; --muted: #b0c4bb; --accent: #8cddc0; --line: #354a41; --notice: #20382e; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      main { max-width: none; margin: 0; padding: 0; border: 0; }
+      nav { display: none; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; }
+      h2, h3 { break-after: avoid; }
+      tr { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">海拔足迹</p>
+      <h1>隐私政策</h1>
+      <p class="meta">更新日期：<time datetime="2026-11-26">2026年11月26日</time><br>生效日期：<time datetime="2026-11-26">2026年11月26日</time></p>
+      <p><strong>开发者／运营者：游钢</strong><br>隐私联系邮箱：<a href="mailto:117753114@qq.com">117753114@qq.com</a></p>
+    </header>
+
+    <p>欢迎使用“海拔足迹”（以下简称“本应用”）。本应用由游钢（以下简称“我们”）开发并运营，提供海拔、位置、气压、天气温度、指南针、打卡分享和历史记录等工具功能。本政策说明我们如何处理您的个人信息，以及您如何管理这些信息。</p>
+    <div class="notice">
+      <strong>请重点阅读：</strong>精确位置信息及可反映您行踪的记录属于敏感个人信息。获得位置权限后，本应用会在获取有效定位时，将经纬度发送给 Open-Meteo 查询天气温度；打开地图时还会请求第三方地图与网页资源。历史记录主要保存在设备本地，但天气、地图、系统位置服务及您主动发起的分享会涉及网络或向其他服务提供信息。请结合下文了解处理目的、接收方和可能的影响。
+    </div>
+
+    <nav aria-label="隐私政策目录">
+      <strong>目录</strong>
+      <ol>
+        <li><a href="#collection">我们处理哪些信息</a></li>
+        <li><a href="#permissions">权限使用说明</a></li>
+        <li><a href="#third-parties">第三方服务与信息提供清单</a></li>
+        <li><a href="#sharing">共享、转让与公开披露</a></li>
+        <li><a href="#storage">保存、安全与境外处理</a></li>
+        <li><a href="#rights">您的权利与管理方式</a></li>
+        <li><a href="#children">未成年人保护</a></li>
+        <li><a href="#updates">本政策的更新</a></li>
+        <li><a href="#contact">如何联系我们</a></li>
+      </ol>
+    </nav>
+
+    <section id="collection" aria-labelledby="collection-title">
+      <h2 id="collection-title">一、我们处理哪些信息</h2>
+      <p>我们仅围绕相应功能处理必要信息。当前版本无需注册账号，未接入广告、广告归因或用户行为统计 SDK，不要求您提供手机号、身份证号或支付信息。模拟模式产生的演示数据不代表您的真实位置。</p>
+      <div class="table-wrap" role="region" aria-label="个人信息处理清单，可横向滚动" tabindex="0">
+        <table>
+          <caption>个人信息处理清单</caption>
+          <thead><tr><th scope="col">功能场景</th><th scope="col">信息种类</th><th scope="col">用途与处理方式</th></tr></thead>
+          <tbody>
+            <tr><td>定位与海拔展示</td><td><strong>经纬度、位置地址、海拔、定位精度</strong>、采样时间</td><td>通过 HarmonyOS 位置服务获取，用于显示当前位置、海拔与定位状态；通过系统逆地理编码服务将坐标转换为地址。拒绝定位授权后，无法获取新的真实定位数据。</td></tr>
+            <tr><td>气压与指南针</td><td>气压、由气压估算的海拔、设备方向角</td><td>通过设备可用的传感器读取，用于气压、海拔与罗盘展示；设备不支持或读取失败时，相应数据可能不可用，或展示已标明的模拟方向。</td></tr>
+            <tr><td>天气温度</td><td><strong>经纬度（保留四位小数）</strong>、网络请求涉及的 IP 地址</td><td>获取有效真实定位时，自动请求 Open-Meteo 天气接口，查询该位置的天气温度。温度来自天气服务，并非手机对周围环境的直接测温。</td></tr>
+            <tr><td>历史采样与打卡</td><td><strong>经纬度、地址、海拔、定位精度</strong>、气压、温度、时间及记录标识</td><td>有效定位后按条件自动保存采样，或在您主动打卡时保存，用于历史浏览与统计；真实记录和模拟记录分开保存在应用本地存储中。</td></tr>
+            <tr><td>打卡分享与复制</td><td>您选择分享的图片或文字，其中可能包含<strong>位置、坐标、海拔</strong>及时间等内容</td><td>生成打卡图片时写入应用缓存；您点击分享后，通过系统分享交给您选择的应用。点击复制时，将对应内容写入系统剪贴板，本应用不为此读取您原有的剪贴板内容。</td></tr>
+            <tr><td>偏好与同意状态</td><td>主题、样式、单位、功能开关、模拟模式及隐私同意状态</td><td>保存在本地偏好设置中，用于恢复您的界面与功能配置。</td></tr>
+            <tr><td>故障诊断</td><td>错误码、传感器可用性、操作状态；部分设备日志可能包含<strong>坐标、地址、海拔</strong></td><td>写入设备系统日志，用于排查定位和运行异常；当前版本未接入向我们自建服务器自动上传诊断日志的功能。请勿向无关人员提供含位置的日志。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>处理位置的必要性与影响：</strong>真实海拔、当前位置和定位打卡需要使用位置数据；天气查询和地图展示还会让相关服务接收坐标或可反映浏览区域的信息。位置泄露可能暴露您所在区域或活动情况，请谨慎授权和分享。当前版本没有独立的天气联网开关。</p>
+    </section>
+
+    <section id="permissions" aria-labelledby="permissions-title">
+      <h2 id="permissions-title">二、权限使用说明</h2>
+      <ul>
+        <li><strong>大致位置权限（APPROXIMATELY_LOCATION）：</strong>用于获取大致位置，支持定位和海拔相关功能。</li>
+        <li><strong>精确位置权限（LOCATION）：</strong>用于提高当前位置、坐标、定位精度和打卡信息的准确性。您可在系统授权界面及权限管理中选择或调整授权；实际可用信息取决于设备和系统能力。</li>
+        <li><strong>网络访问（INTERNET）：</strong>用于天气请求、地图资源加载及需要联网的系统位置服务。该项为普通网络权限，不会单独弹出运行时授权窗口。</li>
+      </ul>
+      <p>本应用未声明后台定位权限，不提供持续后台轨迹采集服务；未申请通讯录、相机、麦克风、电话、短信或相册访问权限。打卡图片使用界面截图生成并写入应用缓存，不通过相机拍摄，也不读取您的相册。</p>
+      <p>拒绝位置权限不会导致应用强制退出，但会影响获取真实海拔、实时天气、当前位置和新增真实定位打卡。您仍可查看设置、已有本地历史记录或使用模拟模式等不依赖新定位的功能。</p>
+    </section>
+
+    <section id="third-parties" aria-labelledby="third-parties-title">
+      <h2 id="third-parties-title">三、第三方服务与信息提供清单</h2>
+      <p>即使没有通过应用包集成第三方统计 SDK，调用在线接口、系统服务及远程网页资源仍可能涉及第三方处理信息。当前版本涉及以下服务：</p>
+      <div class="table-wrap" role="region" aria-label="第三方服务清单，可横向滚动" tabindex="0">
+        <table>
+          <caption>第三方服务与信息提供清单</caption>
+          <thead><tr><th scope="col">接收方／服务</th><th scope="col">使用场景与方式</th><th scope="col">涉及信息</th><th scope="col">政策或说明</th></tr></thead>
+          <tbody>
+            <tr><td>华为／HarmonyOS 位置服务</td><td>通过系统接口获取定位、海拔及逆地理编码；是否联网及底层处理受系统服务配置影响。</td><td><strong>位置、坐标、海拔、精度、地址</strong>及系统位置服务必要信息。</td><td><a href="https://consumer.huawei.com/cn/privacy/privacy-policy/" rel="noopener noreferrer">华为隐私政策</a>；另请查阅设备中的位置服务隐私说明。</td></tr>
+            <tr><td>Open-Meteo 天气服务</td><td>定位成功后通过 HTTPS 请求 api.open-meteo.com，查询天气温度。</td><td><strong>保留四位小数的经纬度</strong>、IP 地址及请求技术信息。其政策说明，服务日志可能包含地理坐标。</td><td><a href="https://open-meteo.com/en/terms" rel="noopener noreferrer">Open-Meteo 条款与隐私说明</a></td></tr>
+            <tr><td>高德地图／高德软件有限公司</td><td>打开地图预览时，通过网页请求高德地图瓦片；当前使用瓦片请求方式。</td><td>反映地图浏览区域的瓦片编号、缩放级别、IP 地址及浏览器请求信息；瓦片编号可能推断所浏览的地理区域。</td><td><a href="https://lbs.amap.com/pages/privacy/" rel="noopener noreferrer">高德地图开放平台隐私权政策</a></td></tr>
+            <tr><td>UNPKG 资源分发服务</td><td>打开地图预览时，从 unpkg.com 加载 Leaflet 地图库脚本与样式。</td><td>IP 地址、所请求的资源路径及浏览器请求头等网络技术信息；本应用不在这些资源地址中主动附加您的坐标。</td><td><a href="https://unpkg.com/" rel="noopener noreferrer">UNPKG 服务说明</a></td></tr>
+            <tr><td>您选择的分享接收应用</td><td>您主动分享打卡图片或使用已复制的文案时接收内容。</td><td>您实际分享或粘贴的图片、文字，其中可能包含<strong>位置与时间</strong>。</td><td>以您选择的接收应用公示的隐私政策为准。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>第三方仅在相应请求或操作发生时接收相关信息，其服务可用性、日志保存及进一步处理请参阅相应政策。我们不以本政策替代第三方应履行的个人信息保护义务。</p>
+    </section>
+
+    <section id="sharing" aria-labelledby="sharing-title">
+      <h2 id="sharing-title">四、共享、转让与公开披露</h2>
+      <p>我们不出售您的个人信息，不将位置用于广告投放或画像营销。信息向外部提供的主要场景为上表列明的服务请求、您主动发起的分享，以及依法必须履行的义务。</p>
+      <p><strong>分享前请检查：</strong>打卡页提供“隐藏精确位置”选项。该选项用于减少分享内容中的精确位置展示，不影响定位、天气请求或本地记录本身的数据处理，也不保证对分享内容完成匿名化；请在发送前检查图片和文字中是否仍包含可识别地点的信息。分享完成后，接收方对该内容的保存和使用由其负责。</p>
+      <p>如发生运营主体变更并涉及个人信息转移，我们将依法告知接收方信息，并要求接收方继续履行个人信息保护义务；如处理目的或方式发生变化，将依法履行相应告知和同意手续。</p>
+    </section>
+
+    <section id="storage" aria-labelledby="storage-title">
+      <h2 id="storage-title">五、保存、安全与境外处理</h2>
+      <h3>1. 本地保存与系统备份</h3>
+      <p>历史记录、偏好设置和同意状态主要保存在应用的设备本地存储中，分享图片保存在应用缓存中。当前版本未配置接收这些历史记录的自建业务服务器。真实历史记录最多保存最近 80 条；模拟记录使用独立存储，并按相应记录数量上限管理。</p>
+      <p>您清除真实历史后，相应本地历史记录会被删除；偏好设置、模拟记录、分享缓存和系统备份不一定同步删除。您可通过设备提供的应用存储管理功能（如有）清理应用数据或缓存，或卸载本应用。已分享给其他应用的内容需向接收方另行管理。</p>
+      <p><strong>本应用已启用系统备份恢复支持。</strong>您启用设备备份、云备份或迁移功能时，系统可能按照其设置处理本应用数据。其保存位置、保存期限和删除方式以设备及备份服务的规则为准；卸载或清除本地数据不一定删除已有备份。</p>
+      <h3>2. 第三方保存及境外处理</h3>
+      <p><strong>Open-Meteo 属于境外天气服务，其公开说明显示免费接口使用欧洲和北美的服务基础设施；天气请求中的经纬度、IP 地址等可能传输并处理于境外。</strong>其隐私说明称，用于故障排查的服务器日志可能包含地理坐标，并在 90 天后删除。您可查阅<a href="https://github.com/open-meteo/open-meteo" rel="noopener noreferrer">其官方服务说明</a>和<a href="https://open-meteo.com/en/terms" rel="noopener noreferrer">隐私说明</a>了解详情。UNPKG 等远程资源分发也可能涉及境外网络节点。</p>
+      <p>如您不希望产生上述基于新定位的天气请求，请在系统设置中撤销本应用的位置权限并停止使用在线定位和天气功能；如不希望加载远程地图资源，请勿打开地图预览。相关操作不会撤回已经完成的第三方请求。对于跨境提供个人信息涉及的告知、同意及其他义务，我们应依照适用法律履行，本政策的说明不替代依法需要的单独同意。</p>
+      <h3>3. 安全措施与保存期限</h3>
+      <p>我们利用系统应用沙箱和访问权限保护本地数据；当前天气、地图及远程资源请求使用 HTTPS。我们仅为实现本政策说明的目的保留必要信息，并按照记录数量上限、您的删除操作及适用法律管理保存期限。设备系统日志和第三方服务器日志受相应系统或服务的保存规则约束。</p>
+      <p>任何安全措施都无法保证绝对安全。请妥善保管设备，注意系统备份与分享范围。如发生个人信息安全事件，我们将依法采取处置措施，并根据适用要求履行通知和报告义务。</p>
+    </section>
+
+    <section id="rights" aria-labelledby="rights-title">
+      <h2 id="rights-title">六、您的权利与管理方式</h2>
+      <ul>
+        <li><strong>查阅：</strong>在首页、定位详情及历史记录页查看相关信息，在设置中查看和调整应用偏好。</li>
+        <li><strong>删除：</strong>进入“设置 → 数据管理 → 清除真实历史”删除真实历史记录；需要清除其他本地数据时，可使用设备支持的应用数据清理方式或卸载应用，并另行管理系统备份。</li>
+        <li><strong>调整或撤销权限：</strong>在设备“设置 → 应用／应用管理 → 海拔足迹 → 权限”中调整位置授权，具体路径以设备系统版本为准。撤销后，本应用无法继续获得对应的新定位信息，既有本地记录不会自动删除。</li>
+        <li><strong>撤回隐私同意：</strong>您可停止使用本应用，并通过系统支持的数据清理或卸载方式清除本地同意状态；如需协助，请通过下方邮箱联系我们。当前应用内未提供独立的隐私同意撤回开关。若从备份恢复了应用数据，同意状态也可能随之恢复。</li>
+        <li><strong>复制、更正、补充及其他请求：</strong>您可通过下方邮箱提出申请。当前版本尚未提供批量历史导出功能；本地记录主要在您的设备上，我们不能直接远程读取或修改，可能需要指导您在本地完成相关操作。</li>
+        <li><strong>账号注销：</strong>当前版本不提供账号注册或登录，无需办理本应用账号注销。</li>
+      </ul>
+      <p>撤回同意或权限不影响撤回前基于有效同意已进行的处理。我们收到您的个人信息权利请求后，将在必要范围内核验请求并在 <strong>15 个工作日内</strong>予以回复或说明处理情况。请勿在邮件中提供密码、身份证完整号码等与请求无关的信息。</p>
+    </section>
+
+    <section id="children" aria-labelledby="children-title">
+      <h2 id="children-title">七、未成年人保护</h2>
+      <p>本应用并非专门面向不满十四周岁的儿童设计。未成年人应在监护人指导下阅读本政策、决定是否授权位置，并谨慎分享包含地点或行踪的信息。不满十四周岁的儿童应由监护人在充分了解数据处理情况后指导使用；如监护人发现儿童个人信息被不当处理，请联系我们，我们将依法核实并处理。</p>
+    </section>
+
+    <section id="updates" aria-labelledby="updates-title">
+      <h2 id="updates-title">八、本政策的更新</h2>
+      <p>功能、第三方服务或个人信息处理方式变化时，我们将相应更新本政策并调整更新日期。涉及处理目的、信息种类、提供对象或您的权利发生重大变化的，我们将依法履行告知和必要的同意程序。您可通过本政策页面查阅最新内容。</p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">九、如何联系我们</h2>
+      <p>如您对本政策、第三方信息提供、个人信息处理或权利行使有疑问、意见或投诉，请通过以下方式联系：</p>
+      <p><strong>开发者／运营者：游钢</strong><br><strong>联系邮箱：</strong><a href="mailto:117753114@qq.com">117753114@qq.com</a><br><strong>邮件主题建议：</strong>海拔足迹－隐私问题／个人信息权利请求</p>
+      <p>我们将在收到请求后 15 个工作日内回复。您也可以依法向有关个人信息保护主管部门反映问题。</p>
+    </section>
+
+    <footer>
+      <p>海拔足迹 · 隐私政策<br><a href="#">返回顶部</a></p>
+      <p>本页面自身不包含统计脚本、广告或远程字体。若您通过 GitHub Pages 等网站托管服务访问本政策，托管服务仍可能依其隐私政策处理访问 IP 地址及必要的访问日志；请参阅<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub 隐私声明</a>或实际托管服务的说明。</p>
+    </footer>
+  </main>
+</body>
+</html>
